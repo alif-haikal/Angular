@@ -1,0 +1,14 @@
+<h1>Welcome</h1>
+<div class="container">Welcome {{ name }}. Welcome page works!</div>
+
+<h1></h1>
+<div class="container">
+  <button (click)="getWelcomeMessage()" class="btn btn-success">
+    Click Here
+  </button>
+</div>
+
+<div class="container" *ngIf=(welcomeMessageFromService)>
+  <h2>Welcome Message From Service </h2>
+    {{welcomeMessageFromService}}
+</div>
