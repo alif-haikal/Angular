@@ -32,7 +32,7 @@ generate component so can be call anywhere inside other/main componenet
 >ng generate component <lowercase componenet_name>
 
 
-#######################################  IMPORTANT NOTE  #######################################
+###########  IMPORTANT NOTE  ###########
 >>>
 	1. module in anuglar define as combination of class and function definition(mcm class dlm java)
 
@@ -41,5 +41,5 @@ generate component so can be call anywhere inside other/main componenet
 		interpolation => {{}}
 		event binding => (click)="funcitionname()"
 		2 way data binding => [(ngModel)]="username"
-#######################################  IMPORTANT NOTE  #######################################
+###########  IMPORTANT NOTE  ###########
 >>>
