@@ -6,7 +6,8 @@ export class Todo {
     public id: number,
     public description: string,
     public targetDate: Date,
-    public isComplete: boolean) {
+    public isCompleted: boolean,
+    ) {
 
   }
 }
@@ -63,13 +64,10 @@ export class ListTodosComponent implements OnInit {
   update(id: number) {
     this.router.navigate(['todo',id]);
 
-  //   this.service.deleteTodo('haikal', id).subscribe(
-  //     response => {
-  //       this.message = "succesfully deleted"
-  //       this.getAllData();
-  //     },
-  //     error => this.handlError(error)
-  //   )
+  }
+
+  add(){
+    this.router.navigate(['todo', -1]);
   }
 
 
