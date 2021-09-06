@@ -46,7 +46,10 @@ export class BasicAuthenticationService {
       Authorization: basicAuthHeaderString
 
     });
-    return this.http.get<AuthenticationBean>(`http://localhost:8080/basicauth`, { headers }).pipe(map(response => { sessionStorage.setItem('authenticatedUser', username); return response; }));
+
+    //pipe method define if request success do what
+    // return this.http.get<AuthenticationBean>(`http://localhost:8080/basicauth`, { headers }).pipe(map(response => { sessionStorage.setItem('authenticatedUser', username); return response; }));
+    return this.http.get<AuthenticationBean>(`http://localhost:8080/basicauth`, { headers }).pipe(map(response => { sessionStorage.setItem('username', username); return response; }));
 
   }
 }

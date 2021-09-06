@@ -11,7 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DocumentationComponent } from './documentation/documentation.component';
-import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TodoComponent } from './todo/todo.component';
 import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter-basic-auth.service';
 
@@ -35,7 +35,8 @@ import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter
     HttpClientModule
   ],
   providers: [
-    { provide:HTTP_INTERCEPTORS , useClass:HttpIntercepterBasicAuthService , multi:true}
+    //multi:true enable us to configure more HTTP INTERCEPTORS as provider in future. if multi is false, the subsequent HTTP INTERCEPTORS will override the current one
+    { provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true }
   ],
   bootstrap: [AppComponent]
 })
